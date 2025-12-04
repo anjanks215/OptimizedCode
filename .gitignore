@@ -1,0 +1,39 @@
+# Build directories
+build/
+bin/
+libs/
+
+# Object files
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CMakeLists.txt.user
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependency files
+*.d
+
+# Test results
+Testing/
+*.log
+
+# Backup files
+*.bak
+*.backup
