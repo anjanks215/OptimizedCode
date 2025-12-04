@@ -1,0 +1,49 @@
+/**
+ * @file ArrayUtils.hpp
+ * @brief Array utility functions using modern C++ containers
+ * @author Senior Software Engineer
+ * @date 2025
+ * 
+ * This file provides optimized array operations using std::vector
+ * with proper memory management and cache-friendly access patterns.
+ */
+
+#ifndef ARRAY_UTILS_HPP
+#define ARRAY_UTILS_HPP
+
+#include <vector>
+#include <cstdint>
+
+namespace utils
+{
+
+/**
+ * @brief Creates an integer array with computed values
+ * @param n Number of elements to create
+ * @return std::vector<int> Vector with automatic memory management
+ * 
+ * Benefits:
+ * - Automatic memory management via RAII
+ * - Contiguous memory for better cache locality
+ * - Exception-safe
+ * - Move semantics for efficient returns
+ * - Bounds checking in debug mode
+ */
+std::vector<int> createArray(int n);
+
+/**
+ * @brief Computes sum of array elements
+ * @param arr Const reference to vector (no copy)
+ * @return int64_t Sum of all elements (using larger type to prevent overflow)
+ * 
+ * Benefits:
+ * - Const reference avoids copying
+ * - Range-based iteration for clarity
+ * - Compiler optimization friendly
+ * - Overflow protection with int64_t
+ */
+int64_t computeSum(const std::vector<int>& arr);
+
+} // namespace utils
+
+#endif // ARRAY_UTILS_HPP
