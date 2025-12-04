@@ -45,6 +45,7 @@
 
 int main()
 {
+    //test
     std::cout << "Optimized dynamic allocation test starting...\n";
 
     // Modern C++: std::string with automatic memory management
